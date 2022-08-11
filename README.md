@@ -13,7 +13,7 @@
 ## Requests vs Responses
 - Client (e.g., your phone, your computer, some other device) sends a request
 - Server (e.g., data service, cloud service) sends a response
-  - Response will contain a status code (see [list](https://moz.com/learn/seo/http-status-codes) here)
+  - Response will contain a status code (see [list](https://moz.com/learn/seo/http-status-codes))
   
 ## Two Types of Requests
 - GET: Get data
