@@ -1,0 +1,39 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(httr)
+library(jsonlite)
+```
+
+## Query
+
+```{r}
+body = list(
+  "query" = "I'm wondering how I can start using Information Commons?"
+)
+```
+
+```{r}
+api_response <- POST( 
+  "http://127.0.0.1:5000/post_example/",
+  body = body,
+  encode = "json"
+)
+
+api_response
+```
+
+
+```{r}
+response_data <- api_response %>% 
+  content("text", encoding = "utf-8") %>% 
+  fromJSON()
+
+response_data
+```
+
