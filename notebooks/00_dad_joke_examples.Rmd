@@ -1,0 +1,89 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+[Dad Joke API](https://icanhazdadjoke.com/api#fetch-a-dad-joke)
+
+```{r}
+library(tidyverse)
+library(httr)
+library(jsonlite)
+```
+
+## Random Joke
+
+### Text Response
+
+```{r}
+api_response <- GET( 
+  "https://icanhazdadjoke.com/", 
+  add_headers(Accept = "text/plain") 
+)
+
+api_response
+```
+
+```{r}
+response_data <- api_response %>% 
+  content("text", encoding = "utf-8")
+
+response_data
+```
+
+### JSON Response
+
+```{r}
+api_response <- GET(
+  "https://icanhazdadjoke.com/",
+  add_headers(Accept = "application/json")
+)
+
+api_response
+```
+
+```{r}
+response_data <- api_response %>% 
+  content("text", encoding = "utf-8") %>% 
+  fromJSON()
+
+response_data
+```
+
+## Specific Joke
+
+### Text Response
+
+```{r} 
+api_response <- GET( 
+  "https://icanhazdadjoke.com/j/JeVDI6EBIe", 
+  add_headers(Accept = "text/plain") 
+)
+```
+
+```{r} 
+response_data <- api_response %>% 
+  content("text", encoding = "utf-8")
+
+response_data
+```
+
+### JSON Response
+
+```{r}
+api_response <- GET(
+  "https://icanhazdadjoke.com/j/JeVDI6EBIe",
+  add_headers(Accept = "application/json")
+)
+
+api_response
+```
+
+```{r} 
+response_data <- api_response %>% 
+  content("text", encoding = "utf-8") %>% 
+  fromJSON()
+
+response_data
+```
+
