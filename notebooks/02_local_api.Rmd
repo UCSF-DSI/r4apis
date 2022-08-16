@@ -14,9 +14,11 @@ library(jsonlite)
 
 ```{r}
 body = list(
+  "user" = "albert lee",
   "query" = "I'm wondering how I can start using Information Commons?"
 )
 ```
+
 
 ```{r}
 api_response <- POST( 

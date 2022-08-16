@@ -3,7 +3,7 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-[PokeAPI](https://pokeapi.co/docs/v2#pokemon-section)
+[Cat Facts](https://catfact.ninja/)
 
 ```{r}
 library(tidyverse)
@@ -11,11 +11,11 @@ library(httr)
 library(jsonlite)
 ```
 
-## Pokemon Details
+## Cat Fact
 
 ```{r}
 api_response <- GET( 
-  "https://pokeapi.co/api/v2/pokemon/charizard/"
+  "https://catfact.ninja/breeds"
 )
 
 api_response

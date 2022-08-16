@@ -56,7 +56,7 @@ response_data
 
 ```{r} 
 api_response <- GET( 
-  "https://icanhazdadjoke.com/j/JeVDI6EBIe", 
+  "https://icanhazdadjoke.com/j/s49h3ElVnrc", 
   add_headers(Accept = "text/plain") 
 )
 ```
@@ -72,7 +72,7 @@ response_data
 
 ```{r}
 api_response <- GET(
-  "https://icanhazdadjoke.com/j/JeVDI6EBIe",
+  "https://icanhazdadjoke.com/j/s49h3ElVnrc",
   add_headers(Accept = "application/json")
 )
 
